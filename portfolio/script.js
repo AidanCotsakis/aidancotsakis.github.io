@@ -155,4 +155,30 @@ function smallsnake(){
 	document.getElementById("tabInfo").textContent = "Python - 2022/08/14";
 }
 
-smallsnake()
+function doodlededuction(){
+	document.getElementById("bannerImg").src = "images/doodleDeductionBanner.png";
+	document.getElementById("tabImg1").src = "images/doodleDeductionScreenshot1.png";
+	document.getElementById("tabImg2").src = "images/doodleDeductionScreenshot2.png";
+	document.getElementById("iframe").src = "https://www.youtube-nocookie.com/embed/6lHrwPlzcOE?rel=0&mute=1";
+	document.getElementById("tabTitle").textContent = "Doodle Deduction";
+	document.getElementById("tabDescription").textContent = "A YouTube channel where the viewer has to guess the drawing before it's finished, fully driven by a program I wrote! You can view the channel by clicking on the icon on the video below.";
+	document.getElementById("tabWIL1").textContent = "This program had to choose a random character, download the images, find the outline, calculate a drawing path, render the frames, compile the video, add music, and finally upload the video to youtube. This is all done automatically.";
+	document.getElementById("tabWIL2").textContent = "";
+	document.getElementById("tabWIL3").textContent = "";
+	document.getElementById("tabInfo").textContent = "Python - 2023/01/01";
+}
+
+function racinggeneticalgorithm(){
+	document.getElementById("bannerImg").src = "images/racingGeneticAlgorithmBanner.png";
+	document.getElementById("tabImg1").src = "images/racingGeneticAlgorithmScreenshot1.png";
+	document.getElementById("tabImg2").src = "images/racingGeneticAlgorithmScreenshot2.png";
+	document.getElementById("iframe").src = "https://www.youtube-nocookie.com/embed/ke_U8FgDGYs?rel=0&mute=1";
+	document.getElementById("tabTitle").textContent = "Racing Genetic Algorithm";
+	document.getElementById("tabDescription").textContent = "A fully functional racing game equipped with a genetic algorithm that learns the racing lines on its own!";
+	document.getElementById("tabWIL1").textContent = "I ran into a lot of optimization problems, I also learned more about collisions. One of the biggest challenges was ensuring the cars did not evolve incorrectly and repeatedly crash into a wall.";
+	document.getElementById("tabWIL2").textContent = "";
+	document.getElementById("tabWIL3").textContent = "";
+	document.getElementById("tabInfo").textContent = "Python - 2023/03/14";
+}
+
+racinggeneticalgorithm()
