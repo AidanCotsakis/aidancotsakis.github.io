@@ -181,4 +181,17 @@ function racinggeneticalgorithm(){
 	document.getElementById("tabInfo").textContent = "Python - 2023/03/14";
 }
 
-racinggeneticalgorithm()
+function raytracing(){
+	document.getElementById("bannerImg").src = "images/raytracingBanner.png";
+	document.getElementById("tabImg1").src = "images/raytracingScreenshot1.png";
+	document.getElementById("tabImg2").src = "images/raytracingScreenshot2.png";
+	document.getElementById("iframe").src = "https://www.youtube-nocookie.com/embed/1a5orIDZUPc?rel=0&mute=1";
+	document.getElementById("tabTitle").textContent = "Ray Tracing";
+	document.getElementById("tabDescription").textContent = "A ray tracing program that sends light rays from the camera and allows them to bounce around. This includes implemented detection of spheres and polygons, as well as customizable reflectiveness of surfaces!";
+	document.getElementById("tabWIL1").textContent = "This primarily uses numpy and pygame meaning I did not have a 3D environment to work with, I had to make my own systems for this. I also had to handle many different types of collisions and learnt a lot about manipulating vectors.";
+	document.getElementById("tabWIL2").textContent = "";
+	document.getElementById("tabWIL3").textContent = "";
+	document.getElementById("tabInfo").textContent = "Python - 2023/05/16";
+}
+
+raytracing()
