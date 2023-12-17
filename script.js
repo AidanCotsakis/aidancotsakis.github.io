@@ -3,7 +3,7 @@ const bodyElements = [
   document.getElementById("home"),
   document.getElementById("about"),
   document.getElementById("projects"),
-  document.getElementById("assignments"),
+  document.getElementById("education"),
   document.getElementById("contact")
 ];
 
@@ -11,7 +11,7 @@ const navElements = [
   document.getElementById("homeNav"),
   document.getElementById("aboutNav"),
   document.getElementById("projectsNav"),
-  document.getElementById("assignmentsNav"),
+  document.getElementById("educationNav"),
   document.getElementById("contactNav")
 ]
 
