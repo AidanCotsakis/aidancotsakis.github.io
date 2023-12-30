@@ -15,6 +15,33 @@ const navElements = [
   document.getElementById("contactNav")
 ]
 
+var navAnimationRemoved = false;
+
+let projectIndex = 0;
+const projectItems = document.querySelectorAll('.project-carousel-item');
+const totalProjects = projectItems.length;
+
+function nextProject() {
+  if (projectIndex < totalProjects - 1) {
+    moveProjectCarousel(projectIndex+1);
+  } else {
+    moveProjectCarousel(0);
+  }
+}
+
+function prevProject() {
+  if (projectIndex > 0) {
+    moveProjectCarousel(projectIndex-1);
+  } else {
+    moveProjectCarousel(totalProjects-1);
+  }
+}
+
+function moveProjectCarousel(targetIndex) {
+  projectIndex = targetIndex;
+  const newTransformValue = -projectIndex * 100 + '%';
+  document.getElementById('project-carousel').style.transform = 'translateX(' + newTransformValue + ')';
+}
 
 window.onload = function() {
   highlightNav();
@@ -37,6 +64,11 @@ function moveNav() {
   }
 
   navbar.style.top = (navbarOffset) + '%';
+
+  if (navAnimationRemoved == false && scrollPos != 0) {
+    navbar.classList.remove('navAnimation');
+    navAnimationRemoved = true;
+  }
 }
 
 function highlightNav() {
