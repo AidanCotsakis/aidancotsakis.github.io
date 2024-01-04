@@ -1,111 +1,125 @@
+<!-- STARTED 2023/12/15 -->
+
 <!DOCTYPE html>
 <html>
 	
 	<head>
-		<title>Aidan Cotsakis Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Aidan Cotsakis</title>
 
 		<style>
-		@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+		@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 		</style>
 
 		<!-- CSS Style Sheet -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<!-- https://fonts.google.com/icons?selected=Material+Symbols+Outlined:navigate_next:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=navigate -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	</head>
 	
 	<body>
 
+		<div id="nav" class="navAnimation">
+			<ul>
+				<li><a id="homeNav" class="plainLink" href="#home">Home</a></li>
+				<li><a id="aboutNav" class="plainLink" href="#about">About</a></li>
+				<li><a id="projectsNav" class="plainLink" href="#projects">Projects</a></li>
+				<li><a id="educationNav" class="plainLink" href="#education">Education</a></li>
+				<li><a id="contactNav" class="plainLink" href="#contact">Contact</a></li>
+			</ul>
+		</div>
 
-
-
-
-		<!-- __________________________________________________TAB__________________________________________________ -->
-
-		<div class="alignment nudge">
-			
-			<div id="tab">
-				
-				<div id="banner">
-					<img id="bannerImg" src="">
-					<h1 id="tabTitle"></h1>
-					<p class="tabP" id="tabInfo"></p>
-				</div>
-					
-					<div class="tabContent">
-
-						<div class="tabFloat">
-							<div class="tabWordContainer">
-								<h2 class="tabH">Description</h2>
-								<p class="tabP" id="tabDescription"></p>
-							</div>
-						</div>
-						<img class="tabImg" id="tabImg1" src="">
-					
-					</div>
-					<div class="tabContent">
-						<img class="tabImg" id="tabImg2" src="">
-						
-						<div class="tabFloat">
-							<div class="tabWordContainer">
-								<h2 class="tabH">Challenges</h2>
-								<p class="tabP" id="tabWIL1"></p>
-								<p class="tabP" id="tabWIL2"></p>
-								<p class="tabP" id="tabWIL3"></p>
-							</div>
-						</div>
-					</div>
-					<iframe id="iframe" width="624" height="351" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<!-- <div class="linebreak"></div> -->
-				<!-- <h2><span>Video</span></h2> -->
+		<div id="home">
+			<div class="title">
+				<p class="firstName">Aidan</p>
+				<p class="lastName">Cotsakis</p>
+				<p class="subTitle">University of British Columbia <br> Computer Engineering Student</p>
 			</div>
 		</div>
 
-		<header>
-			
-			<div class="alignment">
-
-				<div class="title">
-					<h1>Aidan Cotsakis</h1>
-				</div>
-
-				<div class="navigation-buttons">
-					<!-- <p onclick="change_page('about')" id="button_about">About</p> -->
-					<p onclick="change_page('programming')" id="button_programming"class="underline">Programming</p>
-					<!-- <p onclick="change_page('projects')" id="button_projects">Projects</p> -->
-				</div>
-
+		<div class="mainSection" id="about">
+			<div class="contentBox">
+				<p class="sectionHeader">About</p>
 			</div>
+		</div>
+		
+		<div class="mainSection" id="projects">
+			<div class="contentBox">
+				<b class="sectionHeader">Projects</b>
+				<div id="project-carousel-container">
+					<div class="arrowContainer">
+						<div onclick="nextProject()" class="rightArrow material-symbols-outlined unselectable">navigate_next</div>
+						<div onclick="prevProject()" class="leftArrow material-symbols-outlined unselectable">navigate_before</div>
+					</div>
+					<div id="project-carousel">
+						<div class="project-carousel-item">
+							<div class="player unselectable">
+								<video autoplay muted loop><source src="media/Editor[142].mp4" type="video/mp4"></video>
+							</div>
+							<b class="itemTitle">Remote Controlled Car</b>
+							<p class="itemDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis ipsum vel ligula tristique tempor. Etiam gravida lectus eget risus facilisis finibus. Donec vel lobortis turpis. Donec efficitur non dui non dictum. Phasellus commodo tincidunt vulputate. Donec maximus magna ipsum, in faucibus ante tempus eu. Donec tempus, ex sagittis convallis porta, justo metus luctus est, eu sagittis sem eros ac quam. Mauris fermentum, ipsum a efficitur bibendum, libero magna molestie libero, eget dictum nibh risus ac metus.</p>
+						</div>
 
-		</header>
+						<div class="project-carousel-item">
+							<div class="player unselectable">
+								<video autoplay muted loop><source src="media/Editor[59].mp4" type="video/mp4"></video>
+							</div>
+							<b class="itemTitle">Farming Puzzle Game</b>
+							<p class="itemDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis ipsum vel ligula tristique tempor. Etiam gravida lectus eget risus facilisis finibus. Donec vel lobortis turpis. Donec efficitur non dui non dictum. Phasellus commodo tincidunt vulputate. Donec maximus magna ipsum, in faucibus ante tempus eu. Donec tempus, ex sagittis convallis porta, justo metus luctus est, eu sagittis sem eros ac quam. Mauris fermentum, ipsum a efficitur bibendum, libero magna molestie libero, eget dictum nibh risus ac metus.</p>
+						</div>
 
-		<div class="alignment">
-			<div id="navigation">
-				
-				<div class="navigation-icon" onclick="raytracing()"><img src="images/raytracingThumbnail.png"></div>
-				<div class="navigation-icon" onclick="racinggeneticalgorithm()"><img src="images/racingGeneticAlgorithmThumbnail.png"></div>
-				<div class="navigation-icon" onclick="doodlededuction()"><img src="images/doodleDeductionThumbnail.png"></div>
-				<div class="navigation-icon" onclick="smallsnake()"><img src="images/smallsnakeThumbnail.png"></div>
-				<div class="navigation-icon" onclick="passwordmanager()"><img src="images/passwordmanagerThumbnail.png"></div>
-				<div class="navigation-icon" onclick="breakless()"><img src="images/breaklessThumbnail.png"></div>
-				<div class="navigation-icon" onclick="threeDrender ()"><img src="images/3DrenderThumbnail.png"></div>
-				<div class="navigation-icon" onclick="cahactus()"><img src="images/cahactusThumbnail.png"></div>
-				<div class="navigation-icon" onclick="farming()"><img src="images/farmingThumbnail.png"></div>
-				<div class="navigation-icon" onclick="basketball()"><img src="images/basketballThumbnail.png"></div>
-				<div class="navigation-icon" onclick="morph()"><img src="images/morphThumbnail.png"></div>
-				<div class="navigation-icon" onclick="UTTT()"><img src="images/UTTTThumbnail.png"></div>
-				<div class="navigation-icon" onclick="takeover()"><img src="images/takeoverThumbnail.png"></div>
-				<div class="navigation-icon" onclick="recoil()"><img src="images/recoilThumbnail.png"></div>
-				<div class="navigation-icon" onclick="bombbrawl()"><img src="images/bombbrawlThumbnail.png"></div>
-
-				<div class="gap"></div>
-
+						<div class="project-carousel-item">
+							<div class="player unselectable">
+								<video autoplay muted loop><source src="media/Editor[56].mp4" type="video/mp4"></video>
+							</div>
+							<b class="itemTitle">Brakeless</b>
+							<p class="itemDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis ipsum vel ligula tristique tempor. Etiam gravida lectus eget risus facilisis finibus. Donec vel lobortis turpis. Donec efficitur non dui non dictum. Phasellus commodo tincidunt vulputate. Donec maximus magna ipsum, in faucibus ante tempus eu. Donec tempus, ex sagittis convallis porta, justo metus luctus est, eu sagittis sem eros ac quam. Mauris fermentum, ipsum a efficitur bibendum, libero magna molestie libero, eget dictum nibh risus ac metus.</p>
+						</div>
+					</div>
+				</div>
+				<div class="dotContainer">
+					<div onclick="moveProjectCarousel(0)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(1)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(2)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(3)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(4)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(5)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(6)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(7)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(8)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(9)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(10)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(11)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(12)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(13)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(14)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(15)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(16)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+					<div onclick="moveProjectCarousel(17)" class="selectorDot unselectable projectSelectorDot material-symbols-outlined">radio_button_unchecked</div>
+				</div>
 			</div>
-
-
+		</div>
+		
+		<div class="mainSection" id="education">
+			<div class="contentBox">
+				<p class="sectionHeader">Education</p>
+			</div>
+		</div>
+		<div class="mainSection" id="contact">
+			<div class="contentBox">
+				<p class="sectionHeader">Contact</p>
+			</div>
 		</div>
 
-		<!-- __________________________________________________HEADER__________________________________________________ -->
-		<!-- __________________________________________________/HEADER__________________________________________________ -->
+		<div id="mainCircleContainer">
+	        <div id="mainCircle"></div>
+	    </div>
+
+	    <div class="content">
+	    	
+	    </div>
+	    
 
 		<script src="script.js"></script>
 
